@@ -78,9 +78,11 @@ I use the nVidea model of [End-to-End Deep Learning for Self-Driving Cars](https
 
 In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set on a 80%-20% split. 
 
+
+
 On my first model, I used 5 epochs and found that after epoch 3, the validation MSE is sustantial higher then training MSE (0.0281 compared to 0.0189), suggesting that the model is overfitting. 
 
-The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track... to improve the driving behavior in these cases, I ....
+The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track. To improve the driving behavior in these cases, I created additional data by rotate each image vertically. 
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
