@@ -79,8 +79,9 @@ I use the nVidea model of [End-to-End Deep Learning for Self-Driving Cars](https
 In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set on a 80%-20% split. 
 
 
+On my first model, I used 5 epochs and found that after epoch 3, the validation MSE is sustantial higher then training MSE (0.0281 compared to 0.0189 at epoch 4, and 0.0246 compared to training MSE of 0.0172 ), suggesting that the model is overfitting. 
 
-On my first model, I used 5 epochs and found that after epoch 3, the validation MSE is sustantial higher then training MSE (0.0281 compared to 0.0189), suggesting that the model is overfitting. 
+In order to reduce over-fitting. I then used 3 epochs only to train the model . 
 
 The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track. To improve the driving behavior in these cases, I created additional data by rotate each image vertically. 
 
@@ -88,11 +89,15 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 #### 2. Final Model Architecture
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes ...
+The final model architecture (model.py lines 73-92) consisted of a convolution neural network with the following layers and layer sizes ...
+##### Preprocessing Layers
+**Lambda Layer**: Normalization
+**Cropping2D**: Crop the images
 
-Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
+#### Model Layers
+**Layer 1**: Convolution2D 
 
-![alt text][image1]
+
 
 #### 3. Creation of the Training Set & Training Process
 
