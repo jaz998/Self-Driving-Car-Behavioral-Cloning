@@ -55,7 +55,9 @@ The final model architecture (model.py lines 73-92) consisted of a convolution n
 
 #### Model Layers
 **Layer 1**: Convolution2D: filter: 5x5 depth 24, strides: 2x2, activatoin: ReLU
+
 **Layer 2**: Convolution2D: filter: 5x5 depth 36, strides: 2x2, activatoin: ReLU
+
 **Layer 3**: Convolution2D: filter: 5x5 depth 48, strides: 2x2, activatoin: ReLU
 **Layer 4**: Convolution2D: filter: 3x3 depth 64, strides: 2x2, activatoin: ReLU
 **Layer 5**: Convolution2D: filter: 3x3 depth 64, strides: 2x2, activatoin: ReLU
